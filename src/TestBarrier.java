@@ -46,7 +46,7 @@ public class TestBarrier
 		{
 			
 		}
-
+		
 		System.out.println("\n\nPress Enter to begin the freeAll() test:");
         (new BufferedReader(new InputStreamReader(System.in))).read();
 	
@@ -68,5 +68,6 @@ public class TestBarrier
 		}
 		
 		barrier.freeAll();
+
     }
 }
