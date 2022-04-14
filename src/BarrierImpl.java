@@ -11,9 +11,9 @@ public class BarrierImpl implements Barrier {
 	@Override
 	public void waitForOthers() {
 		incrementWaiting();
-		if(getWaiting() < limit) {
+		if(waiting < limit) {
 			beginWait();
-		} else if(getWaiting() == limit || limit == 0) {
+		} else if(waiting == limit || limit == 0) {
 			endAllWait();
 		}
 	}
@@ -32,12 +32,6 @@ public class BarrierImpl implements Barrier {
 		synchronized(this) {
 			notifyAll();
 			waiting = 0;
-		}
-	}
-
-	public int getWaiting() {
-		synchronized (this) {
-			return waiting;
 		}
 	}
 	

@@ -19,7 +19,7 @@ public class Worker implements Runnable
 	{
 		System.out.println("A");
 		SleepUtilities.takeNap();
-
+		
 		partA.waitForOthers();
 
 		System.out.println("B");
