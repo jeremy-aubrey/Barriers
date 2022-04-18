@@ -1,3 +1,5 @@
+// ** PROVIDED ** //
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -17,6 +19,10 @@ public class TestBarrier
 
     public static void main(String args[]) throws java.io.IOException
 	{
+    	
+    	TestBarrier obj = new TestBarrier();
+    	obj.developerInfo();
+    	
 		System.out.println("Proper output is that we should see is that all threads");
  		System.out.println("output an 'A' before reaching the barrier and then a 'B'");
  		System.out.println("after proceeding through the barrier. Therefore, output");
@@ -49,7 +55,7 @@ public class TestBarrier
 		
 		System.out.println("\n\nPress Enter to begin the freeAll() test:");
         (new BufferedReader(new InputStreamReader(System.in))).read();
-	
+
 		barrier = new BarrierImpl(THREAD_COUNT + 1);
 		workers = new Thread[THREAD_COUNT];
 		
@@ -70,4 +76,23 @@ public class TestBarrier
 		barrier.freeAll();
 
     }
+    
+    //***************************************************************
+    //
+    //  Method:       developerInfo (Non Static)
+    // 
+    //  Description:  The developer information method of the program.
+    //
+    //  Parameters:   None
+    //
+    //  Returns:      N/A 
+    //
+    //**************************************************************
+    public void developerInfo()
+    {
+       System.out.println("Name:    Jeremy Aubrey");
+       System.out.println("Course:  COSC 4302 Operating Systems");
+       System.out.println("Program: 6\n");
+
+    }// end developerInfo method
 }

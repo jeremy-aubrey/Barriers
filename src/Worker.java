@@ -1,6 +1,9 @@
+// ** PROVIDED ** //
+
 /**
  * A worker using the Barrier
  */
+
 public class Worker implements Runnable 
 {
 	private Barrier partA;
